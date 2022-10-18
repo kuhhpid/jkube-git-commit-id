@@ -32,20 +32,20 @@
                 <groupId>org.eclipse.jkube</groupId>
                 <artifactId>kubernetes-maven-plugin</artifactId>
                 <version>1.9.1</version>
-
                 <executions>
                     <execution>
-                        <phase>deploy</phase>
+                        <phase>package</phase>
                         <goals>
                             <goal>resource</goal>
-                            <goal>build</goal>
-                            <goal>push</goal>
-                            <goal>apply</goal>
                         </goals>
                     </execution>
                 </executions>
             </plugin>
-
+            <plugin>
+                <groupId>org.wildfly.plugins</groupId>
+                <artifactId>wildfly-jar-maven-plugin</artifactId>
+                <version>8.0.1.Final</version>
+            </plugin>
         </plugins>
     </build>
 </project>
